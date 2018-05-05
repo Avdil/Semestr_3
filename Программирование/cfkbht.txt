@@ -1,0 +1,123 @@
+#include<iostream>
+#include<vector>
+#include<conio.h>
+#include<iterator>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	vector <int>::iterator i;
+	vector<int >v;
+	vector <int>v1 = { 1, 2, 3, 4, 5, 6 };
+	vector <int>v2 { 1, 2, 3, 4, 5, 6 };
+	int searchValue(5);
+	vector< int >::iterator iter = find(v1.begin(), v1.end(), searchValue);
+	if (iter != v1.end())
+		v1.erase(iter);
+	for ( i = v2.begin(); i < v2.end(); i++)
+		cout << *i << endl;
+int x;
+	for (int i = 0; i < 5; i++)
+	{
+		cout << "Enter number: "<<endl; 
+		cin >> x;
+		v.push_back(x);
+		cout << "Size is : " << v.size() << endl << "Capaccity is : " << v.capacity() << endl << "Adress is : " << &v[i] << endl;
+	}
+	for (int i = 0; i < 5; i++)
+		cout << v[i]<< " ";
+	v1.erase(v1.begin(), v1.end());
+	vector< int >::iterator first, last;
+	first = find(v2.begin(), v2.end(), 2);
+	last = find(v2.begin(), v2.end(), 6);
+	// ... проверка first и last
+	v2.erase(first, last);
+
+	_getch();
+	return 0; 
+	
+}
+
+666666
+#include<iostream>
+#include<vector>
+#include<conio.h>
+#include<iterator>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	vector <int>::iterator i;
+vector <int>v1 = { 1, 2, 3, 4, 5, 6 };
+int x;
+cout << "Enter x: ";
+cin >> x;
+i = find(v1.begin(), v1.end(), x);
+if (i != v1.end())
+v1.erase(i);
+for (i = v1.begin(); i < v1.end(); i++)
+	cout << *i << endl;
+
+	_getch();
+	return 0; 
+	
+}
+7.
+#include<iostream>
+#include<conio.h>
+#include <vector>
+#include<algorithm>
+using namespace std;
+void main()
+{
+	vector<int> v4 = { 1, 2, 3, 4, 5 };
+	for (int i = 0; i < v4.size() / 2; i++)
+	{
+		vector<int>::iterator j = v4.begin();
+		v4.erase(j);
+	}
+	cout << "iterator:";
+	for (vector<int>::iterator i = v4.begin(); i != v4.end(); ++i)
+		cout << *i << " ";
+	cout << "po index:";
+	for (int i = 0; i < v4.size(); i++)
+		cout << v4[i] << " ";
+	_getch();
+}
+
+
+
+
+
+---------------------------
+#include<iostream>
+#include<conio.h>
+#include <vector>
+#include<algorithm>
+using namespace std;
+void main()
+{
+	vector<int > ::iterator i;
+	vector<int> v4 = { 1, 2, 3, 4, 5 };
+	vector<int> v5 = { 10 };
+	v4.insert(v4.begin(), v5.begin(), v5.end());
+	for (i = v4.begin(); i < v4.end(); i++)
+		cout << *i<<" ";
+	cout << endl;
+	v4.insert(v4.begin() + 3, 5, 123);
+	for (i = v4.begin(); i < v4.end(); i++)
+		cout << *i << " ";
+	cout << endl;
+	for (int i = 0; i < v4.size() / 2; i++)
+	{
+		vector<int>::iterator j = v4.begin();
+		v4.erase(j);
+	}
+	cout << "iterator:";
+	for (vector<int>::iterator i = v4.begin(); i != v4.end(); ++i)
+		cout << *i << " ";
+	cout << "po index:";
+	for (int i = 0; i < v4.size(); i++)
+		cout << v4[i] << " ";
+	_getch();
+}
